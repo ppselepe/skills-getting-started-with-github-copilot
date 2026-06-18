@@ -3,46 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mergington High School Activities</title>
+    <title>Booking Manager</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <h1>Booking Manager</h1>
+      <h2>Track bookings, money, reminders, and gig expenses</h2>
     </header>
 
     <main>
-      <section id="activities-container">
-        <h3>Available Activities</h3>
-        <div id="activities-list">
-          <!-- Activities will be loaded here -->
-          <p>Loading activities...</p>
+      <section>
+        <h3>Add a Booking</h3>
+        <form id="booking-form">
+          <div class="form-group">
+            <label for="client-name">Client Name:</label>
+            <input type="text" id="client-name" required />
+          </div>
+          <div class="form-group">
+            <label for="client-email">Client Email:</label>
+            <input type="email" id="client-email" required />
+          </div>
+          <div class="form-group">
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" required />
+          </div>
+          <div class="form-group">
+            <label for="package-size">Package:</label>
+            <select id="package-size" required></select>
+          </div>
+          <div class="form-group">
+            <label for="payment-type">Payment Type:</label>
+            <select id="payment-type" required>
+              <option value="deposit">Deposit</option>
+              <option value="paid_in_full">Paid in full</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="amount-paid">Amount Paid:</label>
+            <input type="number" id="amount-paid" min="1" step="0.01" required />
+          </div>
+          <button type="submit">Save Booking</button>
+        </form>
+        <div id="message" class="hidden"></div>
+      </section>
+
+      <section>
+        <h3>Finance Snapshot</h3>
+        <div id="finance-summary">
+          <p>Loading finance summary...</p>
         </div>
       </section>
 
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
-          <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
-          </div>
-          <div class="form-group">
-            <label for="activity">Select Activity:</label>
-            <select id="activity" required>
-              <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
-            </select>
-          </div>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div id="message" class="hidden"></div>
+      <section class="full-width">
+        <h3>Bookings</h3>
+        <div id="bookings-list">
+          <p>Loading bookings...</p>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2023 Mergington High School</p>
+      <p>In-memory demo for booking, reminder, invoice, and expense tracking.</p>
     </footer>
 
     <script src="app.js"></script>

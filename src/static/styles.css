@@ -32,13 +32,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
-}
-
-@media (min-width: 768px) {
-  main {
-    grid-template-columns: 2fr 1fr;
-  }
 }
 
 section {
@@ -47,7 +40,7 @@ section {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px;
+  flex: 1 1 320px;
 }
 
 section h3 {
@@ -57,7 +50,7 @@ section h3 {
   color: #1a237e;
 }
 
-.activity-card {
+.booking-card {
   margin-bottom: 15px;
   padding: 15px;
   border: 1px solid #ddd;
@@ -65,12 +58,12 @@ section h3 {
   background-color: #f9f9f9;
 }
 
-.activity-card h4 {
+.booking-card h4 {
   margin-bottom: 10px;
   color: #0066cc;
 }
 
-.activity-card p {
+.booking-card p {
   margin-bottom: 8px;
 }
 
@@ -108,19 +101,19 @@ button:hover {
   background-color: #3949ab;
 }
 
-.message {
+.success {
   margin-top: 20px;
   padding: 10px;
   border-radius: 4px;
-}
-
-.success {
   background-color: #e8f5e9;
   color: #2e7d32;
   border: 1px solid #a5d6a7;
 }
 
 .error {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
   background-color: #ffebee;
   color: #c62828;
   border: 1px solid #ef9a9a;
@@ -134,6 +127,45 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.full-width {
+  flex-basis: 100%;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.summary-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 12px;
+  background-color: #f9f9f9;
+}
+
+.summary-card span {
+  display: block;
+  margin-top: 8px;
+  color: #1a237e;
+  font-size: 18px;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.expense-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
 }
 
 footer {
