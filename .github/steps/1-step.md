@@ -2,7 +2,7 @@
 
 Welcome to your **"Getting Started with GitHub Copilot"** exercise! :robot:
 
-In this exercise, you will be using different GitHub Copilot features to work on a website that allows students of Mergington High School to sign up for extracurricular activities. 🎻 ⚽️ ♟️
+In this exercise, you will be using different GitHub Copilot features to work on a booking manager that tracks gigs, invoices, reminders, payments, and expenses. 📅 💸 🧾
 
 <img width="600" alt="screenshot of Mergington High School WebApp" src="../images/mergington-high-school-webapp.png" />
 
